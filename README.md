@@ -13,8 +13,12 @@ CREATE TABLE `maxmind`.`locations` (
   `region` VARCHAR(45) NULL,
   `city` VARCHAR(45) NULL,
   `postalCode` VARCHAR(45) NULL,
-  `latitude` DECIMAL(10) NULL,
-  `longitude` DECIMAL(10) NULL,
+  `latitude` FLOAT NULL,
+  `longitude` FLOAT NULL,
   `metroCode` VARCHAR(45) NULL,
   `areaCode` VARCHAR(45) NULL);
+```
+
+```
+load data infile '/home/ilix/geo/GeoLiteCity_20140401/GeoLiteCity-Location.csv' into table locations fields terminated by ',' enclosed by '"';
 ```
