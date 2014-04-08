@@ -20,5 +20,5 @@ CREATE TABLE `maxmind`.`locations` (
 ```
 
 ```
-load data infile '/home/ilix/geo/GeoLiteCity_20140401/GeoLiteCity-Location.csv' into table locations fields terminated by ',' enclosed by '"';
+load data infile '/home/ilix/geo/GeoLiteCity_20140401/GeoLiteCity-Location.csv' into table locations character set latin1 fields terminated by ',' enclosed by '"';
 ```
