@@ -22,3 +22,19 @@ CREATE TABLE `maxmind`.`locations` (
 ```
 load data infile '/home/ilix/geo/GeoLiteCity_20140401/GeoLiteCity-Location.csv' into table locations character set latin1 fields terminated by ',' enclosed by '"';
 ```
+
+config
+===========
+
+Create a file called app.config.json where app.js is.
+
+```
+{
+  "db": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "password": "iHasSikrit",
+    "username": "meow"
+  }
+}
+```
