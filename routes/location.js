@@ -33,7 +33,7 @@ exports.disconnect = function() {
  */
 exports.find = function (req, res, next) {
 
-  res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Cache-Control', 'no-cache');
 
   try {
@@ -42,18 +42,12 @@ exports.find = function (req, res, next) {
 
     q = q.toLowerCase();
 
-    q = q.replace('å', '?');
-    q = q.replace('ä', '?');
-    q = q.replace('ö', '?');
-
     q = q.replace('\'', '');
     q = q.replace('"', '');
     q = q.replace(';', '');
 
-    console.log(q);
     q = decodeURIComponent(q);
-    console.log(q);
-
+    
     var getQuery = 'SELECT * FROM `maxmind`.`locations` WHERE LCASE(`city`) LIKE \'\%' + q + '\%\'';
 
     _connection.query(getQuery, function (err, rows, fields) {
