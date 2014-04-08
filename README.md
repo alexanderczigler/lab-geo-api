@@ -3,6 +3,15 @@ lab-geo-api
 
 =^-^=
 
+howto
+===========
+
+Download the maxmind db (csv) and load it into a database of your choice. I use mysql server, so use that if you wish to use the code as-is.
+
+http://dev.maxmind.com/geoip/legacy/geolite/
+
+Create a table and load the csv, see the code examples below.
+
 db
 ===========
 
