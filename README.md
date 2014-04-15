@@ -1,7 +1,9 @@
 lab-geo-api
 ===========
 
-=^-^=
+This is a lab project - use at your own risk! =^-^=
+
+In brief, lab-geo-api is a nodejs express api that lets your lookup cities' geo data in a database filled with maxmind's free ip data. It is probably far from usable in any real business application but you are free to use the code and play around with it.
 
 howto
 ===========
