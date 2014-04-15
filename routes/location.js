@@ -48,7 +48,7 @@ exports.find = function (req, res, next) {
 
     q = decodeURIComponent(q);
     
-    var getQuery = 'SELECT * FROM `maxmind`.`locations` WHERE LCASE(`city`) LIKE \'\%' + q + '\%\'';
+    var getQuery = 'SELECT * FROM `maxmind`.`locations` WHERE LCASE(`city`) LIKE \'\%' + q + '\%\' ORDER BY 1';
 
     _connection.query(getQuery, function (err, rows, fields) {
       if (err)
